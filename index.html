@@ -30,15 +30,15 @@ $(document).ready(function() {
 	$('#example').DataTable( {
 		ajax: "data/orthogonal.txt",
 		columns: [
-			{ data: "name" },
-			{ data: "position" },
+			{ data: "match" },
+			{ data: "venue" },
 			{ data: "office" },
 			{ data: "extn" },
 			{ data: {
 				_:    "start_date.display",
 				sort: "start_date.timestamp"
 			} },
-			{ data: "salary" }
+			{ data: "time" }
 		]
 	} );
 } );

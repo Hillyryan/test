@@ -3,20 +3,20 @@
         {
             "match": "Manchester City vs. Chelsea",
              "venue": "Machester",
-            "time": "12:30 BST",
-                      "Date": "Saturday 3rd December 2016"
+             "time": "12:30 BST",
+             "date": "Saturday 3rd December 2016"
         },
         {
              "match": "Crystal Palace vs. Southampton",
             "venue": "Crystal Palace",
              "time": "15:00 BST",
-                        "Date": "Saturday 3rd December 2016"
+             "date": "Saturday 3rd December 2016"
         },
         {
             "match": "Stoke City vs. Burnley",
              "venue": "Stoke",
             "time": "15:00 BST",
-                     "Date": "Saturday 3rd December 2016"
+             "Date": "Saturday 3rd December 2016"
         }
 
     ]

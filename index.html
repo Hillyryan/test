@@ -28,12 +28,17 @@
 	
 $(document).ready(function() {
 	$('#example').DataTable( {
-		ajax: "data/fixtures.txt",
+		ajax: "data/orthogonal.txt",
 		columns: [
-			{ data: "match" },
-			{ data: "venue" },
-			{ data: "time" }
-
+			{ data: "name" },
+			{ data: "position" },
+			{ data: "office" },
+			{ data: "extn" },
+			{ data: {
+				_:    "start_date.display",
+				sort: "start_date.timestamp"
+			} },
+			{ data: "salary" }
 		]
 	} );
 } );
@@ -48,10 +53,12 @@ $(document).ready(function() {
 			<table id="example" class="display" cellspacing="0" width="100%">
 				<thead>
 					<tr>
-						<th>Match</th>
-						<th>Venue</th>
-						<th>Time</th>
-						
+						<th>Name</th>
+						<th>Position</th>
+						<th>Office</th>
+						<th>Extn.</th>
+						<th>Start date</th>
+						<th>Salary</th>
 					</tr>
 				</thead>
 			

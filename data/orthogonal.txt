@@ -16,7 +16,7 @@
             "match": "Stoke City vs. Burnley",
              "venue": "Stoke",
             "time": "15:00 BST",
-             "Date": "Saturday 3rd December 2016"
+             "date": "Saturday 3rd December 2016"
         }
 
     ]

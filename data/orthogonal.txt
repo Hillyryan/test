@@ -4,31 +4,19 @@
             "match": "Manchester City vs. Chelsea",
              "venue": "Machester",
             "time": "12:30 BST",
-            "start_date": {
-                "display": "Mon 25th Apr 11",
-                "timestamp": "1303686000"
-            },
-             "extn": "5421"
+                      "extn": "5421"
         },
         {
              "match": "Crystal Palace vs. Southampton",
             "venue": "Crystal Palace",
              "time": "15:00 BST",
-            "start_date": {
-                "display": "Mon 25th Jul 11",
-                "timestamp": "1311548400"
-            },
-               "extn": "8422"
+                        "extn": "8422"
         },
         {
             "match": "Stoke City vs. Burnley",
              "venue": "Stoke",
             "time": "15:00 BST",
-            "start_date": {
-                "display": "Mon 12th Jan 09",
-                "timestamp": "1231718400"
-            },
-            "extn": "1562"
+                     "extn": "1562"
         }
 
     ]

@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "name": "Paul O'Sullivan",
+            "name": "Tiger Nixon",
             "position": "System Architect",
             "salary": "$320,800",
             "start_date": {

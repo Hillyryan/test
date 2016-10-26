@@ -3,7 +3,7 @@
   <link rel="stylesheet" type="text/css" href="data/jquery.dataTables.css">
 </head>
   <body>
-<table id="added-articles" class="table">
+<table id="added-aadata" class="table">
                 <tr>
                     <th>Title</th>
                     <th>Categories</th>
@@ -13,29 +13,18 @@
   <script type="text/javascript" charset="utf8" src="data/jquery-1.8.2.min.js"></script>
   <script type="text/javascript" charset="utf8" src="data/jquery.dataTables.min.js"></script>
   <script>
-function () {
- 
+ $(function(){
+$("#example").dataTable({
+  "bServerSide": true,
+  "sAjaxSource": "data/data_source.json",
     // JSON Data
-    var articles = [
-        { 
-            "title":"jQuery.each(JSON)",
-            "url":"http://hmkcode.com/jquery-each-json/",
-            "categories":["jQuery"],
-            "tags":["jquery","json","$.each"]
-        },
-        {
-            "title":" Java Servlet Send & Receive JSON Using jQuery.ajax() ",
-            "url":"http://hmkcode.com/java-servlet-send-receive-json-using-jquery-ajax/",
-            "categories":["Java"],
-            "tags":["java","json","jquery"]
-        }
-    ];
- 
+});
+
     // 1. remove all existing rows
     $("tr:has(td)").remove();
  
     // 2. get each article
-    $.each(articles, function (index, article) {
+    $.each(aadata, function (index, article) {
  
         // 2.2 Create table column for categories
         var td_categories = $("<td/>");
@@ -58,13 +47,13 @@ function () {
         });
  
         // 2.6 Create a new row and append 3 columns (title+url, categories, tags)
-        $("#added-articles").append($('<tr/>')
+        $("#added-aadata").append($('<tr/>')
                 .append($('<td/>').html("<a href='"+article.url+"'>"+article.title+"</a>"))
                 .append(td_categories)
                 .append(td_tags)
         );  
-    });             
-}
+    })             
+
   </script>
  
 </body>

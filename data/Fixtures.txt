@@ -1,22 +1,22 @@
 {
   "aadata": [
     {
-      "Match": "Manchester City vs. Chelsea",
-      "Venue": "Machester",
-      "Time": "12:30 BST"
-      "Date": "Saturday 3rd December 2016"
+      "match": "Manchester City vs. Chelsea",
+      "venue": "Machester",
+      "time": "12:30 BST"
+      "date": "Saturday 3rd December 2016"
     },
     {
-      "Match": "Crystal Palace vs. Southampton",
-      "Venue": "Crystal Palace",
-      "Time": "15:00 BST"
-      "Date": "Saturday 3rd December 2016"
+      "match": "Crystal Palace vs. Southampton",
+      "venue": "Crystal Palace",
+      "time": "15:00 BST"
+      "date": "Saturday 3rd December 2016"
     },
     {
-      "Match": "Stoke City vs. Burnley",
-      "Venue": "Stoke",
-      "Time": "15:00 BST"
-      "Date": "Saturday 3rd December 2016"
+      "match": "Stoke City vs. Burnley",
+      "venue": "Stoke",
+      "time": "15:00 BST"
+      "date": "Saturday 3rd December 2016"
     }
  
   ]

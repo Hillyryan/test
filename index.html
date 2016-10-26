@@ -12,24 +12,20 @@
   $(function(){
 $("#example").dataTable({
   "bServerSide": true,
-  "sAjaxSource": "data/data_source.json",
+  "sAjaxSource": "data/Fixtures.txt",
   "aoColumns": [{
-    "mData":"name",
-    "sTitle": "Site name"
+    "mData":"Match",
+    "sTitle": "Match"
   },{
-    "mData": "url",
-    "mRender": function ( url, type, full )  {
-      return  '<a href="'+url+'">' + url + '</a>';
-    }
+    "mData":"Venue",
+    "sTitle": "Venue"
   },{
-    "mData": "editor.name"
+    "mData":"Time",
+    "sTitle": "Time"
   },{
-    "mData": "editor.phone"
-  },{
-    "mData":"editor",
-    "mRender": function(data){
-      return data.email.join("<br>");
-    }
+    "mData":"Date",
+    "sTitle": "Date"
+  }
   }]
 });
   })    

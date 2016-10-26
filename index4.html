@@ -26,17 +26,33 @@
 	</script>
 	<script type="text/javascript" language="javascript" class="init">
 	
-$(document).ready(function() {
-	$('#example').DataTable( {
-		ajax: "data/fixtures.txt",
-		columns: [
-			{ data: "match" },
-			{ data: "venue" },
-			{ data: "time" }
-
-		]
-	} );
-} );
+$("#example").dataTable({
+  "aaData":[
+    ["Sitepoint","http://sitepoint.com","Blog","2013-10-15 10:30:00"],
+    ["Flippa","http://flippa.com","Marketplace","null"],
+    ["99designs","http://99designs.com","Marketplace","null"],
+    ["Learnable","http://learnable.com","Online courses","null"],
+    ["Rubysource","http://rubysource.com","Blog","2013-01-10 12:00:00"]
+  ],
+  "aoColumnDefs":[{
+        "sTitle":"Site name"
+      , "aTargets": [ "site_name" ]
+  },{
+        "aTargets": [ 1 ]
+      , "bSortable": false
+      , "mRender": function ( url, type, full )  {
+          return  '<a href="'+url+'">' + url + '</a>';
+      }
+  },{
+        "aTargets":[ 3 ]
+      , "sType": "date"
+      , "mRender": function(date, type, full) {
+          return (full[2] == "Blog") 
+                    ? new Date(date).toDateString()
+                    : "N/A" ;
+      }  
+  }]
+});
 
 	</script>
 </head>
@@ -45,17 +61,13 @@ $(document).ready(function() {
 		<section>
 			<h1>DataTables example <span>Orthogonal data</span></h1>
 			
-			<table id="example" class="display" cellspacing="0" width="100%">
-				<thead>
-					<tr>
-						<th>Match</th>
-						<th>Venue</th>
-						<th>Time</th>
-						
-					</tr>
-				</thead>
-			
-			</table>
+		<table id="example">
+  <thead>
+    <tr><th class="site_name">Name</th><th>Url </th><th>Type</th><th>Last modified</th></tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 					
 							
 			

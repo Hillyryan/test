@@ -29,7 +29,16 @@ $("#example").dataTable({
     "sTitle": "Date"
   }]
 });
-  })    
+  }) 
+  
+    $(function(){
+$("#example").dataTable({
+  columnDefs: [
+        { targets: [0, 1], visible: true},
+        { targets: '_all', visible: false }
+    ]
+} );
+   
   </script>
  
 </body>

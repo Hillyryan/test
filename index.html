@@ -1,40 +1,45 @@
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="data/jquery.dataTables.css">
-</head>
-  <body>
-<table id="example">
+<HTML> 
+<HEAD>
 
-</table>
+<TITLE>Exporting into Excel</TITLE>
 
+</HEAD> 
 
-    
-    
-    <script type="text/javascript" charset="utf8" src="data/jquery-1.8.2.min.js"></script>
-  <script type="text/javascript" charset="utf8" src="data/jquery.dataTables.min.js"></script>
-  <script>
-  $(function(){
-$("#example").dataTable({
-  "bServerSide": true,
-  "sAjaxSource": "data/data_source.json",
-  "aoColumns": [{
-    "mData":"match",
-    "sTitle": "Match" 
-  },{
-    "mData":"venue",
-    "sTitle": "Venue"
-  },{
-    "mData":"time",
-    "sTitle": "Time"
-  },{
-    "mData":"date",
-    "sTitle": "Date"
-  }]
-});
-  }) 
+<SCRIPT Language = "VBScript">
 
-   
-  </script>
- 
-</body>
-</html>
+Function Export(P,R)
+
+Set ExcelApp = CreateObject("Excel.application")
+ExcelApp.Visible = True
+
+strPathDoc = "D:\atul.xls" 'Your File path
+
+Set myExcelDoc = ExcelApp.Workbooks.Open(strPathDoc)
+ExcelApp.Visible = True
+myExcelDoc.Windows(1).Visible = True
+set XlSheet = myExcelDoc.Worksheets(2)
+XlSheet.Range("A6").value=P
+XlSheet.Range("A7").value=R
+myExcelDoc.save
+myExcelDoc.close
+Set myExcelDoc = Nothing
+Set ExcelApp = Nothing
+End Function
+
+Sub cmdExp_OnClick()
+Dim lPrincipal 
+Dim dblRate 
+
+Frstnm = Disnm.value
+Lstnm = TreatGrp.value
+cInterest = Export(Frstnm, Lstnm)
+
+End Sub
+
+< /SCRIPT> <BODY> 
+
+First Name: <INPUT Type="Text" Name="Disnm" Value="">
+
+Last Name : <INPUT Type="Text" Name="TreatGrp" Value="">
+<INPUT Type="Button" 
+Name="cmdExp" Value="Connect"> </BODY> </HTML>
